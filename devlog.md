@@ -32,8 +32,8 @@
 ### 方案答疑
 #### 聚合应用的实现
 * 黎君：输入
-www.bilibili.com/account/dynamic之类
-的链接，然后有更新可以自动推送。
+www.bilibili.com/account/dynamic
+之类的链接，然后有更新可以自动推送。
 chrome有类似的插件，可以参考软件的开源码：github/zacyu/bilibili-helper
 b站有两个api，可以get到两个json文件，一个有新动态的数量，一个是新动态的具体信息。那个拓展每分钟get一次，如果有新动态就用chrome的内置方法create一个notification(就是弹窗)。关键是b站有这个api,随便输个网址不一定有这样的api。
 
