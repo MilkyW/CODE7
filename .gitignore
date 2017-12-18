@@ -30,6 +30,12 @@ coverage
 # node-waf configuration
 .lock-wscript
 
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
@@ -48,4 +54,10 @@ lib
 .env
 
 # Editor
+
+# Bower
+bower_components/
+
+# IDE/Editor data
+
 .idea
