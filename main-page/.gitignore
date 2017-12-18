@@ -35,7 +35,7 @@ coverage
 node_modules
 
 ## building output directory
-
+build
 
 # OSX
 .DS_Store
