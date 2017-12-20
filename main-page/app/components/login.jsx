@@ -48,7 +48,7 @@ const login =  React.createClass({
 
   render(){
     return    <div>
-      <Form horizontal>
+      <Form horizontal className ="login">
         <FormGroup
           controlId="formHorizontalId"
           validationState={this.idCheck()}

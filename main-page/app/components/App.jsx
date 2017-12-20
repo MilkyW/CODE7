@@ -12,8 +12,14 @@ const SearchBox = React.createClass({
   render(){
     return(
       <div className = "searchBox">
+        <Row>
+          <Col  xs={3}>
         <input type="text" ref="myTextInput"  placeholder="请输入关键词来搜索"/>
+          </Col>
+          <Col xsOffset={5} xs={1}>
         <Button  onClick={this.handleChange} bsStyle="primary">搜索</Button>
+          </Col>
+        </Row>
       </div>
     )
   }
@@ -24,12 +30,13 @@ const DisplayData = React.createClass({
     return(
       <div>
         <Row>
-          <Col xsOffset={1} xs={2}>{this.props.title}</Col>
+          <Col xsOffset={1} xs={3}>{this.props.title}</Col>
+          <Col xs={1}>{this.props.uploader}</Col>
           <Col xs={1}>{this.props.voteCount}</Col>
         </Row>
       </div>
-    )
-  }
+)
+}
 });
 
 const DataList = React.createClass({
@@ -38,38 +45,46 @@ const DataList = React.createClass({
       {
         id:1,
         title:"React 设计思想",
+        uploader:"aaa",
         voteCount:100
       },
       {
         id:2,
         title:"React 入门教程实例-阮一峰",
+        uploader:"bbb",
         voteCount:105
       },
       {
         id:3,
         title:"React构建实时聊天应用",
+        uploader:"ccc",
         voteCount:110
       },
       {
         id:4,
         title:"React入门",
+        uploader:"ddd",
         voteCount:120
       },
       {
         id:5,
         title:"React入门",
+        uploader:"ddd",
         voteCount:120
       },      {
         id:6,
         title:"React入门",
+        uploader:"ddd",
         voteCount:120
       },      {
         id:7,
         title:"React入门",
+        uploader:"ddd",
         voteCount:120
       },      {
         id:8,
         title:"React入门",
+        uploader:"ddd",
         voteCount:120
       },
     ];
@@ -108,6 +123,7 @@ const DataList = React.createClass({
           key = {q.id}
           datakey = {q.id}
           title = {q.title}
+          uploader = {q.uploader}
           voteCount = {q.voteCount}
         />
       });
@@ -117,7 +133,8 @@ const DataList = React.createClass({
         <Row>
           <Col xsOffset={1} xs={3}><h3>教程列表</h3></Col></Row>
         <Row><Col xsOffset={1} xs={3}><SearchBox searchTextUpdate={this.handleSearchText}/></Col></Row>
-        <Row><Col xsOffset={1} xs={2}>文章标题</Col>
+        <Row><Col xsOffset={1} xs={3}>文章标题</Col>
+          <Col xs={1}>上传者</Col>
           <Col xs={1}>赞数</Col></Row>
         {dataComps}
       </div>
@@ -141,6 +158,7 @@ const main =  React.createClass({
             <NavItem><Link to = "/login">登录</Link></NavItem>
             <NavItem><Link to="/user"> 个人中心</Link></NavItem>
             <NavItem><Link to="/release"> 发布教程</Link></NavItem>
+            <NavItem><Link to="/special"> 精选</Link></NavItem>
             <NavItem><Link to = "/test"> Test</Link></NavItem>
           </Nav>
         </Navbar>

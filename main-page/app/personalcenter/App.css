@@ -1,0 +1,12 @@
+/* Base Application Styles */
+h2 {
+  color:dodgerblue;
+}
+
+.interaction {
+  padding:10px 5px 200px 5px;
+  margin:15px 10px;
+  border-bottom-style:solid;
+  border-bottom-color:lightgray;
+  border-bottom-width:2px;
+}
