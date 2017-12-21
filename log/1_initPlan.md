@@ -11,8 +11,12 @@
 加入刘泽宇方案中提出的用户发布与用户反馈功能（点赞、评分和评论），同时应向发布者追踪提示最新互动（点赞、评论）。
 
 ### 开发环境
-react+boolstrap+npm+yeoman
-请大家通过folk主项目到自己的GitHub，然后在自己的项目里多次push，完成后到主项目申请pull request的方式进行推进和合并。
+react+boolstrap+npm@5.3+node@8.1.4+yeoman
+
+### 工作流
+【已过期】请大家通过folk主项目到自己的GitHub，然后在自己的项目里多次push，完成后到主项目申请pull request的方式进行推进和合并。
+
+【最新】按照任爹在12.20周三下午课上的最新要求，改成在本项目（MilkyW/CODE7）下，以将要完成的功能要求为名从master新建分支，并在完成后合并到master。
 
 ### 页面分工
 >ddl：2017/12/18 Mon. 15：59
