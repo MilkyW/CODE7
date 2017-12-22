@@ -1,7 +1,7 @@
 //require('normalize.css/normalize.css');
 require('./App.css');
-
 import React from 'react';
+import SNavbar from '../components/snavbar';
 
 var courseArray = [];
 var collectionArray = [];
@@ -78,6 +78,7 @@ class AppComponent extends React.Component {
   render() {
     return (
       <div className="index">
+        <SNavbar/>
         <Interaction />
         <Mycourse />
         <Mycollection />

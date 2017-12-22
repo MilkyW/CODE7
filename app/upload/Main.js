@@ -3,6 +3,7 @@
 
 import React from 'react';
 import InputForm from './InputFormComponent'
+import SNavbar from '../components/snavbar';
 
 class UploadComponet extends React.Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class UploadComponet extends React.Component {
   render() {
     return (
         <div>
+          <SNavbar/>
           <InputForm onSubmit={this.handleSubmit}/>
         </div>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router'
 require('./App.css');
+import SNavbar from './snavbar';
 import{Navbar,Col,Row,NavItem,Image,Nav,Grid,Form,Button}from "react-bootstrap"
 
 const SearchBox = React.createClass({
@@ -148,22 +149,7 @@ const main =  React.createClass({
   render(){
     return(
       <div>
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <Link to="/">Demo page</Link>
-            </Navbar.Brand>
-          </Navbar.Header>
-          <Nav class="pull-right">
-            <NavItem><Link to = "/login">登录</Link></NavItem>
-            <NavItem><Link to="/user"> 个人中心</Link></NavItem>
-            <NavItem><Link to="/release"> 发布教程</Link></NavItem>
-            <NavItem><Link to="/special"> 精选</Link></NavItem>
-          </Nav>
-        </Navbar>
-
-
-
+        <SNavbar/>
         <div className="data">
         <DataList/>
         </div>
