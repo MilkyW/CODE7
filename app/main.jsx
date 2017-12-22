@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.jsx';
 import Usercenter from './personalcenter/Main';
-import Release from './submit/Main';
+import Release from './upload/Main';
 import Login from './components/login';
 import Test from "./components/test";
 import Special from "./components/special";
