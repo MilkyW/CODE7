@@ -159,7 +159,6 @@ const main =  React.createClass({
             <NavItem><Link to="/user"> 个人中心</Link></NavItem>
             <NavItem><Link to="/release"> 发布教程</Link></NavItem>
             <NavItem><Link to="/special"> 精选</Link></NavItem>
-            <NavItem><Link to = "/test"> Test</Link></NavItem>
           </Nav>
         </Navbar>
 
