@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+import SNavbar from './snavbar';
 import{Form,FormControl,FormGroup,Col,Checkbox,ControlLabel,Button}from "react-bootstrap"
 
 const login =  React.createClass({
@@ -48,6 +48,7 @@ const login =  React.createClass({
 
   render(){
     return    <div>
+      <SNavbar/>
       <Form horizontal className ="login">
         <FormGroup
           controlId="formHorizontalId"

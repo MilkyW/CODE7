@@ -5,6 +5,7 @@ import React from 'react';
 import InputForm from './InputFormComponent'
 import SNavbar from '../components/snavbar';
 
+
 class UploadComponet extends React.Component {
   constructor(props) {
     super(props);
