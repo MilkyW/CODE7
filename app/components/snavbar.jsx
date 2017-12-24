@@ -16,6 +16,7 @@ const SNavbar = React.createClass({
           <NavItem><Link to = "/login">登录</Link></NavItem>
           <NavItem><Link to="/user"> 个人中心</Link></NavItem>
           <NavItem><Link to="/release"> 发布教程</Link></NavItem>
+          <NavItem><Link to="/showpage"> 示例</Link></NavItem>
         </Nav>
       </Navbar>
       </div>

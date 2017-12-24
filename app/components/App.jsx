@@ -181,7 +181,7 @@ const main =  React.createClass({
   }
 });
 
-export default main
+export default main;
 
 /*
 export default class App extends React.Component {

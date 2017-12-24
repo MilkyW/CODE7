@@ -6,6 +6,7 @@ import Release from './upload/Main';
 import Login from './components/login';
 import Test from "./components/test";
 import Special from "./components/special";
+import Showpage from "./show-page/src/index";
 import {Router, Route,hashHistory}from'react-router';
 
   ReactDOM.render(
@@ -16,6 +17,7 @@ import {Router, Route,hashHistory}from'react-router';
    <Route path = "/login" component = {Login}/>
    <Route path = "/test" component = {Test}/>
    <Route path = "/special" component = {Special}/>
+   <Route path = "/showpage" component = {Showpage}/>
  </Router>,
   document.getElementById('app')
 );
