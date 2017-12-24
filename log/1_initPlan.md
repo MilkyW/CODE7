@@ -30,7 +30,7 @@ react+boolstrap+npm@5.3+node@8.1.4+yeoman
 
 【读取教程列表，获取并显示标题（用于搜索结果排序，相关度降序，超链接跳转到对应教程页面）、点赞数（用于精选排序，降序）、评论数、发布者、关键词（用于搜索结果排序，相关度降序）、简介前50字】
 
-![页面右上角登陆栏设想](https://github.com/MilkyW/CODE7/blob/master/src/%E7%99%BB%E9%99%86%E6%A0%8F.png?raw=true)
+![页面右上角登陆栏设想](https://github.com/MilkyW/CODE7/blob/master/log/src/%E7%99%BB%E9%99%86%E6%A0%8F.png?raw=true)
 
 左上角小LOGO（超链接跳转到主页），右上角登陆栏，未登录状态下显示用户名输入栏、密码输入栏、登陆键，登陆状态下显示用户信息——用户名、个人中心和发布教程的跳转按钮。
 
@@ -60,7 +60,7 @@ react+boolstrap+npm@5.3+node@8.1.4+yeoman
 #### 教程展示页面
 >负责人：吴幸融
 
-![网络教程关系设想](https://github.com/MilkyW/CODE7/blob/master/src/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B%E5%85%B3%E7%B3%BB%E8%AE%BE%E6%83%B3.png?raw=true)
+![网络教程关系设想](https://github.com/MilkyW/CODE7/blob/master/log/src/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B%E5%85%B3%E7%B3%BB%E8%AE%BE%E6%83%B3.png?raw=true)
 
 显示教程标题，点赞数，评分，发布者，发布日期，更新日期，关键词，完整简介。
 

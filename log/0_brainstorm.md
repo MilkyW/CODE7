@@ -31,7 +31,7 @@
 
 ### 方案答疑
 #### 聚合应用的实现
-![网站监视推送设想](https://github.com/MilkyW/CODE7/blob/master/src/%E7%BD%91%E7%AB%99%E7%9B%91%E8%A7%86%E6%8E%A8%E9%80%81%E8%AE%BE%E6%83%B3.png?raw=true)
+![网站监视推送设想](https://github.com/MilkyW/CODE7/blob/master/log/src/%E7%BD%91%E7%AB%99%E7%9B%91%E8%A7%86%E6%8E%A8%E9%80%81%E8%AE%BE%E6%83%B3.png?raw=true)
 * 黎君：输入
 www.bilibili.com/account/dynamic
 之类的链接，然后有更新可以自动推送。
@@ -62,7 +62,7 @@ b站有两个api，可以get到两个json文件，一个有新动态的数量，
 * 吴幸融：我觉得更多一些量化的数据好，对比、排名、各取所需更方便，如果是纯文字向的看起来太累。
 
 #### 网络教程资料汇总
-![网络教程关系设想](https://github.com/MilkyW/CODE7/blob/master/src/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B%E5%85%B3%E7%B3%BB%E8%AE%BE%E6%83%B3.png?raw=true)
+![网络教程关系设想](https://github.com/MilkyW/CODE7/blob/master/log/src/%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B%E5%85%B3%E7%B3%BB%E8%AE%BE%E6%83%B3.png?raw=true)
 * 吴幸融：胡嘉弘的那个，你自己提的定位问题我觉得可以把教程分类，按照级别分类也很正常嘛，课程难度、入门要求。
 
 * 胡嘉弘：分类我想过，很难分好，要怎么定义难度啊？
