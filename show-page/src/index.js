@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import {
   PageHeader, Media, Panel, ListGroup, ListGroupItem, Label, ButtonToolbar,
   Button, FormGroup, ControlLabel, FormControl, HelpBlock, Form,
-  Pagination, ButtonGroup, Grid, Row, Col
+  Pagination, ButtonGroup, Grid, Row, Col, Tabs, Tab
 } from 'react-bootstrap';
 
 ReactDOM.render(<App />, document.getElementById('root'));
@@ -14,9 +14,24 @@ registerServiceWorker();
 
 var series_name = 'React从入门到摔门';
 document.title = series_name;
-var creator = '但愿浓密';
-var time = "2017/12/23 23:51";
-var stars = 4.9;
+
+function get_creator(series_name) {
+  var str = '但愿浓密';
+  return str;
+}
+var creator = get_creator(series_name);
+
+function get_time(series_name) {
+  var str = '2017/12/23 23:51';
+  return str;
+}
+var time = get_time(series_name);
+
+function get_stars(series_name) {
+  var stars = 4.9;
+  return stars;
+}
+var stars = get_stars(series_name);
 
 const big = (
   <div>
@@ -33,6 +48,113 @@ ReactDOM.render(
   document.getElementById('title')
 );
 
+function get_dictription(series_name) {
+  var str = (<div><p>0(:3 )～ =͟͟͞͞('､3)_ヽ)＿ 今天上班累到灵魂出窍</p>
+    <p>_(:3 」∠)_ 到家一直这样，不想动</p>
+    <p>_(:3 ⌒ﾞ)_ 挠挠</p>
+    <p>_(:3 」∠)_ 得起来洗衣服</p>
+    <p>_( '-' _)⌒)_ 试图起来</p>
+    <p>ヾ(⌒(_´-ㅅ-`)_ 算了</p></div>);
+  return str;
+}
+var dictription = get_dictription(series_name);
+
+const panelsInstance = (
+  <div>
+    <Grid>
+      <Row className="show-grid">
+        <Col sm={6} md={12}>
+          <Panel header="简介">
+            {dictription}
+          </Panel>
+        </Col>
+      </Row>
+    </Grid>
+  </div>
+);
+
+ReactDOM.render(panelsInstance, document.getElementById('intro'));
+
+function get_content(series_name) {
+  var arr = [[
+    ["React 入门实例教程",
+      "http://www.ruanyifeng.com/blog/2015/03/react.html"],
+    [], []],
+    [["React-Bootstrap:组件",
+      "http://react-bootstrap.cn/components.html"],
+      ["Components·Bootstrap","https://getbootstrap.com/docs/3.3/components/"], []],
+    [["使用ES6语法重构React组件",
+      "https://www.cnblogs.com/yongjz/p/5356914.html"],
+      [], []],
+    [[], [], []]];
+  return arr;
+}
+var content = get_content(series_name);
+
+const tabsInstance = (
+  <Grid>
+    <Row className="show-grid">
+      <Col sm={6} md={12}>
+        <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+          <Tab eventKey={1} title="基础">
+            <ListGroup>
+              {
+                content[0].map(function (currentValue) {
+                  let x = (<ListGroupItem
+                    target="_blank"
+                    href={currentValue[1]}>{currentValue[0]}</ListGroupItem>);
+                  return x;
+                })
+              }
+            </ListGroup>
+          </Tab>
+          <Tab eventKey={2} title="进阶">
+            <ListGroup>
+              {
+                content[1].map(function (currentValue) {
+                  let x = (<ListGroupItem
+                    target="_blank"
+                    href={currentValue[1]}>{currentValue[0]}</ListGroupItem>);
+                  return x;
+                })
+              }
+            </ListGroup>
+          </Tab>
+          <Tab eventKey={3} title="高级">
+            <ListGroup>
+              {
+                content[2].map(function (currentValue) {
+                  let x = (<ListGroupItem
+                    target="_blank"
+                    href={currentValue[1]}>{currentValue[0]}</ListGroupItem>);
+                  return x;
+                })
+              }
+            </ListGroup>
+          </Tab>
+          <Tab eventKey={4} title="拓展" disabled>
+            <ListGroup>
+              {
+                content[3].map(function (currentValue) {
+                  let x = (<ListGroupItem
+                    target="_blank"
+                    href={currentValue[1]}>{currentValue[0]}</ListGroupItem>);
+                  return x;
+                })
+              }
+            </ListGroup>
+          </Tab>
+        </Tabs>
+      </Col>
+    </Row>
+  </Grid>
+);
+
+ReactDOM.render(tabsInstance, document.getElementById('main'));
+
+var star_num = 776;
+var thumb_num = 776;
+
 class StarButton extends Component {
   constructor() {
     super();
@@ -42,13 +164,14 @@ class StarButton extends Component {
   render() {
     return (
       <Button bsStyle="primary" onClick={this.handleClick.bind(this)} block>
-        {this.state.active ? '☆UNSTAR' : '★STAR'}
+        {(this.state.active ? '☆UNSTAR' : '★STAR') + '(' + star_num + ')'}
       </Button>
     );
   }
 
   handleClick() {
     let active = this.state.active;
+    star_num += active ? -1 : 1;
     this.setState({active: !active});
   }
 }
@@ -62,7 +185,7 @@ class ThumbButton extends Component {
   render() {
     return (
       <Button bsStyle="info" onClick={this.handleClick.bind(this)} block>
-        {this.state.active ? '♡UNTHUMB' : '❤THUMB'}
+        {(this.state.active ? '♡UNTHUMB' : '❤THUMB') + '(' + thumb_num + ')'}
       </Button>
     );
   }
@@ -70,6 +193,7 @@ class ThumbButton extends Component {
   handleClick() {
     let active = this.state.active;
     this.setState({active: !active});
+    thumb_num += active ? -1 : 1;
   }
 }
 
@@ -126,7 +250,7 @@ function FieldGroup({id, label, help, ...props}) {
 const formInstance = (
     <Grid>
       <Row className="show-grid">
-        <Col sm={6} md={10}>
+        <Col sm={6} md={12}>
           <form>
             <Panel header="发表评论" bsStyle="info">
               <FieldGroup
@@ -167,7 +291,7 @@ const mediaAlignmentInstance = (
   <div>
     <Grid>
       <Row className="show-grid">
-        <Col sm={6} md={10}>
+        <Col sm={6} md={12}>
           <Panel header="评论" bsStyle="primary">
             <ListGroup fill>
               {
