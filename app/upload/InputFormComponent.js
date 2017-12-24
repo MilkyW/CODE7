@@ -144,7 +144,7 @@ class RelatedLink extends React.Component {
           <span className="input-group-btn">
             <button className="btn btn-default" type="button" onClick={this.handleAdd}>Add</button>
           </span>
-          <input type="text" className="form-control" id="rlink" placeholder="related link" onKeyDown={this.keyDown} ref="rlink"/>
+          <input type="text" className="form-control" id="rlink" placeholder={this.props.placeholder}  onKeyDown={this.keyDown} ref="rlink"/>
         </div>
         <ul className="list-group">
           {llist}
@@ -158,32 +158,24 @@ class InputFormComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      difficulty: 0,
       error: {
         title: false,
         link: false,
         description: false,
         img: false,
-        difficulty: false
       },
       rlinkError: false
      }
 
-    this.setDifficulty = this.setDifficulty.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  setDifficulty(dif) {
-    this.setState({
-      difficulty: dif
-    });
-  }
 
   handleSubmit() {
     let result = {
       title: this.refs['title'].value,
-      link: this.refs['link'].value,
       description: this.refs['des'].value,
+      // blink: this.refs['basic'].state.links,
       //--------------------------------------
       img: '', // add event listener
       tags: this.refs['addTag'].state.tags,
@@ -197,7 +189,6 @@ class InputFormComponent extends React.Component {
         link: !result.link,
         description: !result.description,
         img: false,
-        difficulty: prevState.difficulty === 0
       }
     }));
     for (let prop in this.state.error) {
@@ -224,26 +215,20 @@ class InputFormComponent extends React.Component {
           <input type="text" className="form-control" id="title" placeholder="Title" ref="title"/>
         </div>
         <div className={this.state.error.link? 'form-group has-error' : 'form-group'}>
-          <label htmlFor="link">Link</label>
-          <input type="text" className="form-control" id="link" placeholder="URL" ref="link"/>
+          <label htmlFor="basic">基础</label>
+          <RelatedLink ref="basic" id="basic" placeholder="基础链接"/>
+          <label htmlFor="intermediate">进阶</label>
+          <RelatedLink ref="intermediate" id="basic" placeholder="进阶链接"/>
+          <label htmlFor="advanced">高级</label>
+          <RelatedLink ref="advanced" id="basic" placeholder="高级链接"/>
         </div>
         <div className={this.state.error.description? 'form-group has-error' : 'form-group'}>
           <label htmlFor="description">Description</label>
           <textarea className="form-control" id="description" placeholder="Description" rows="3" ref="des"></textarea>
         </div>
-        <div className={this.state.error.img? 'form-group has-error' : 'form-group'}>
-          <label htmlFor="img">Image</label>
-          <input type="file" id="img" ref="img"/>
-        </div>
         <AddTag ref="addTag"/>
-        <RelatedLink ref="rlink" error={this.state.rlinkError}/>
-        <div className="form-group">
-          <div className={this.state.error.difficulty? 'btn-group has-error' : 'btn-group'} role="group">
-            <button type="button" className={this.state.difficulty === 1 ? 'btn btn-primary' : 'btn btn-default'} onClick={this.setDifficulty.bind(this, 1)}>Basic</button>
-            <button type="button" className={this.state.difficulty === 2 ? 'btn btn-primary' : 'btn btn-default'} onClick={this.setDifficulty.bind(this, 2)}>Intermediate</button>
-            <button type="button" className={this.state.difficulty === 3 ? 'btn btn-primary' : 'btn btn-default'} onClick={this.setDifficulty.bind(this, 3)}>Advanced</button>
-          </div>
-        </div>
+        <label htmlFor="rlink">拓展链接</label>
+        <RelatedLink ref="rlink" id="rlink" error={this.state.rlinkError}/>
         <div className="form-group">
           <div className="btn-group" role="group">
             <button type="button" className="btn btn-primary" onClick={this.handleSubmit}>Submit</button>
