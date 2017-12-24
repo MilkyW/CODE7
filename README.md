@@ -11,7 +11,7 @@
 
 First, clone the repo
 ```bash
-$ git clone https://github.com/MilkyW/CODE7/tree/integration
+$ git clone https://github.com/MilkyW/CODE7
 ```
 
 
@@ -22,6 +22,10 @@ Second, install the dependencies.
 ```bash
 $ npm install
 ```
+
+> 报错:（npm ERR! errno -4048，Error: EPERM: operation not permitted,...）
+
+> 解决方法:直接用命令清理，控制台输入npm cache clean --force
 
 Then, launch the app.
 
