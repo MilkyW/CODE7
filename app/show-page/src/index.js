@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import SNavbar from '../../components/snavbar';
 import registerServiceWorker from './registerServiceWorker';
 import {
   PageHeader, Media, Panel, ListGroup, ListGroupItem, Label, ButtonToolbar,
@@ -59,7 +60,7 @@ const panelsInstance = (
   <div>
     <Grid>
       <Row className="show-grid">
-        <Col sm={6} md={12}>
+        <Col sm={12} md={12}>
           <Panel header="简介">
             {dictription}
           </Panel>
@@ -89,7 +90,7 @@ var content = get_content(series_name);
 const tabsInstance = (
   <Grid>
     <Row className="show-grid">
-      <Col sm={6} md={12}>
+      <Col sm={12} md={12}>
         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
           <Tab eventKey={1} title="基础">
             <ListGroup>
@@ -243,7 +244,7 @@ function FieldGroup({id, label, help, ...props}) {
 const formInstance = (
     <Grid>
       <Row className="show-grid">
-        <Col sm={6} md={12}>
+        <Col sm={12} md={12}>
           <form>
             <Panel header="发表评论" bsStyle="info">
               <FieldGroup
@@ -283,7 +284,7 @@ const mediaAlignmentInstance = (
   <div>
     <Grid>
       <Row className="show-grid">
-        <Col sm={6} md={12}>
+        <Col sm={12} md={12}>
           <Panel header="评论" bsStyle="primary">
             <ListGroup fill>
               {
@@ -321,6 +322,7 @@ class Main extends Component{
     return (
       <div className="App">
         <App />
+        <SNavbar />
         {big}
         {panelsInstance}
         {tabsInstance}

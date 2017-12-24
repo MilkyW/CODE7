@@ -171,7 +171,7 @@ const DataList = React.createClass({
 const main =  React.createClass({
   render(){
     return(
-      <div>
+      <div className="index">
         <SNavbar/>
         <div className="data">
         <DataList/>

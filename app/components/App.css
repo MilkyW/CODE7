@@ -1,17 +1,17 @@
 
-.login{
-   margin-top:250px;
-}
-.center{
-  float: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.login {
+  margin-top: 250px;
+  background-color: #fff;
 }
 
-.title{
-  margin-left:40px;
+.center {
+  float: none;
+  display: block;
 }
-.description{
-  height:60px;
+
+.title {
+}
+
+.description {
+  height: 60px;
 }

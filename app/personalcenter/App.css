@@ -1,16 +1,10 @@
 /* Base Application Styles */
+
 body{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background-color: #fbfbfb;
-}
-
-
-.index {
-  margin-left:200px;
-  margin-right:200px;
-  background-color:#fff;
 }
 
 .single {

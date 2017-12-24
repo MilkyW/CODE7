@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom'
+import {Grid, Row, Col} from 'react-bootstrap';
 
 // require('styles//InputForm.css');
 
@@ -48,15 +49,15 @@ class AddTag extends React.Component {
     e = (e) ? e : ((window.event) ? window.event : '')
     let keyCode = e.keyCode ? e.keyCode : (e.which ? e.which : e.charCode);
     if (keyCode == 13) {
-        this.handleAdd();
+      this.handleAdd();
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.input = ReactDOM.findDOMNode(this.refs['inputTag']);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.input = null;
   }
 
@@ -121,15 +122,15 @@ class RelatedLink extends React.Component {
     e = (e) ? e : ((window.event) ? window.event : '')
     let keyCode = e.keyCode ? e.keyCode : (e.which ? e.which : e.charCode);
     if (keyCode == 13) {
-        this.handleAdd();
+      this.handleAdd();
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.input = ReactDOM.findDOMNode(this.refs['rlink']);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.input = null;
   }
 
@@ -139,12 +140,12 @@ class RelatedLink extends React.Component {
       llist.push(<li className="list-group-item" onClick={this.handleDel} key={link}>{link}</li>)
     ))
     return (
-      <div className={this.props.error? 'form-group has-error' : 'form-group'}>
+      <div className={this.props.error ? 'form-group has-error' : 'form-group'}>
         <div className="input-group">
           <span className="input-group-btn">
             <button className="btn btn-default" type="button" onClick={this.handleAdd}>Add</button>
           </span>
-          <input type="text" className="form-control" id="rlink" placeholder={this.props.placeholder}  onKeyDown={this.keyDown} ref="rlink"/>
+          <input type="text" className="form-control" id="rlink" placeholder={this.props.placeholder} onKeyDown={this.keyDown} ref="rlink"/>
         </div>
         <ul className="list-group">
           {llist}
@@ -165,7 +166,7 @@ class InputFormComponent extends React.Component {
         img: false,
       },
       rlinkError: false
-     }
+    }
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -209,33 +210,39 @@ class InputFormComponent extends React.Component {
 
   render() {
     return (
-      <form>
-        <div className={this.state.error.title? 'form-group has-error' : 'form-group'}>
-          <label htmlFor="title">Title</label>
-          <input type="text" className="form-control" id="title" placeholder="Title" ref="title"/>
-        </div>
-        <div className={this.state.error.link? 'form-group has-error' : 'form-group'}>
-          <label htmlFor="basic">基础</label>
-          <RelatedLink ref="basic" id="basic" placeholder="基础链接"/>
-          <label htmlFor="intermediate">进阶</label>
-          <RelatedLink ref="intermediate" id="basic" placeholder="进阶链接"/>
-          <label htmlFor="advanced">高级</label>
-          <RelatedLink ref="advanced" id="basic" placeholder="高级链接"/>
-        </div>
-        <div className={this.state.error.description? 'form-group has-error' : 'form-group'}>
-          <label htmlFor="description">Description</label>
-          <textarea className="form-control" id="description" placeholder="Description" rows="3" ref="des"></textarea>
-        </div>
-        <AddTag ref="addTag"/>
-        <label htmlFor="rlink">拓展链接</label>
-        <RelatedLink ref="rlink" id="rlink" error={this.state.rlinkError}/>
-        <div className="form-group">
-          <div className="btn-group" role="group">
-            <button type="button" className="btn btn-primary" onClick={this.handleSubmit}>Submit</button>
-            <button type="reset" className="btn btn-default">Reset</button>
-          </div>
-        </div>
-      </form>
+      <Grid>
+        <Row className="show-grid">
+          <Col sm={12} md={12}>
+            <form>
+              <div className={this.state.error.title ? 'form-group has-error' : 'form-group'}>
+                <label htmlFor="title">Title</label>
+                <input type="text" className="form-control" id="title" placeholder="Title" ref="title"/>
+              </div>
+              <div className={this.state.error.link ? 'form-group has-error' : 'form-group'}>
+                <label htmlFor="basic">基础</label>
+                <RelatedLink ref="basic" id="basic" placeholder="基础链接"/>
+                <label htmlFor="intermediate">进阶</label>
+                <RelatedLink ref="intermediate" id="basic" placeholder="进阶链接"/>
+                <label htmlFor="advanced">高级</label>
+                <RelatedLink ref="advanced" id="basic" placeholder="高级链接"/>
+              </div>
+              <div className={this.state.error.description ? 'form-group has-error' : 'form-group'}>
+                <label htmlFor="description">Description</label>
+                <textarea className="form-control" id="description" placeholder="Description" rows="3" ref="des"></textarea>
+              </div>
+              <AddTag ref="addTag"/>
+              <label htmlFor="rlink">拓展链接</label>
+              <RelatedLink ref="rlink" id="rlink" error={this.state.rlinkError}/>
+              <div className="form-group">
+                <div className="btn-group" role="group">
+                  <button type="button" className="btn btn-primary" onClick={this.handleSubmit}>Submit</button>
+                  <button type="reset" className="btn btn-default">Reset</button>
+                </div>
+              </div>
+            </form>
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }
