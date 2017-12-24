@@ -320,10 +320,12 @@ const mediaAlignmentInstance = (
 class Main extends Component{
   render() {
     return (
-      <div className="App">
+      <div className="Appp">
         <App />
         <SNavbar />
+        <div id="title">
         {big}
+        </div>
         {panelsInstance}
         {tabsInstance}
         {THUMB_STAR}
