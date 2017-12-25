@@ -40,7 +40,7 @@ class UploadComponet extends React.Component {
 
   render() {
     return (
-        <div>
+        <div className="index">
           <SNavbar/>
           <InputForm onSubmit={this.handleSubmit}/>
         </div>
