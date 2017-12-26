@@ -25,9 +25,13 @@
 - 上传/修改
 - 个人中心
 
+通过导航栏等进行链接。
+
 #### 主页
 
-![主页截图]()
+![主页截图](https://github.com/MilkyW/CODE7/blob/master/log/src/%E4%B8%BB%E9%A1%B5.jpg?raw=true)
+
+![主页搜索功能](https://github.com/MilkyW/CODE7/blob/master/log/src/%E4%B8%BB%E9%A1%B5%E6%90%9C%E7%B4%A2.jpg?raw=true)
 
 已实现：
 - 登陆
@@ -41,7 +45,7 @@
 
 #### 上传/修改
 
-![上传截图]()
+![上传截图](https://github.com/MilkyW/CODE7/blob/master/log/src/%E4%B8%8A%E4%BC%A0&%E4%BF%AE%E6%94%B9.jpg?raw=true)
 
 已实现:
 - 上传表单
@@ -54,7 +58,9 @@
 
 #### 教程展示
 
-![展示截图]()
+![展示截图0](https://github.com/MilkyW/CODE7/blob/master/log/src/%E6%B5%8F%E8%A7%880.jpg?raw=true)
+
+![展示截图1](https://github.com/MilkyW/CODE7/blob/master/log/src/%E6%B5%8F%E8%A7%881.jpg?raw=true)
 
 已实现:
 - 显示教程信息
@@ -66,7 +72,7 @@
 
 #### 个人中心
 
-![个人中心]()
+![个人中心](https://github.com/MilkyW/CODE7/blob/master/log/src/%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83.jpg?raw=true)
 
 已实现：
 - 显示互动消息
